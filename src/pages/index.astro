@@ -2,8 +2,493 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import internacionalizacion from '../assets/internacionalizacion.png';
+import whoWeAre from '../assets/who-we-are.png';
+import blgoLoor from '../assets/blgo-loor.png';
+import normativasImg from '../assets/cards/normativas.png';
+import politicasImg from '../assets/cards/politicas.png';
+import contratoImg from '../assets/cards/contrato.png';
+import eventosImg from '../assets/cards/eventos.png';
 ---
 
 <Layout>
 	<Hero title="INTERNACIONALIZACION" image={internacionalizacion.src} />
+	
+	<!-- About Section -->
+	<section class="about-section">
+		<div class="container">
+			<div class="about-content">
+				<div class="about-image">
+					<img src={whoWeAre.src} alt="Quienes somos" />
+				</div>
+				<div class="about-text">
+					<h2>QUIENES SOMOS?</h2>
+					<p>Somos la Oficina de Internacionalización Universitaria de PUCEM, dedicada a crear puentes globales que conecten a nuestra comunidad académica con el mundo.</p>
+					<p>Facilitamos experiencias transformadoras a través de programas de intercambio, colaboraciones internacionales y servicios de apoyo intercultural que enriquecen la formación integral de nuestros estudiantes.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Mission Section -->
+	<section class="mission-section">
+		<div class="container">
+			<h2>MISION:</h2>
+			<p>Como Oficina de Internacionalización Universitaria nos comprometemos a impulsar la internacionalización integral de nuestra Sede, facilitando experiencias y aprendizajes mediante alianzas transversales en educación, investigación y vinculación. Promovemos la movilidad de estudiantes, docentes y personal administrativo; gestionamos redes académicas globales; y ofrecemos servicios de apoyo intercultural que enriquecen la formación global de nuestra comunidad universitaria. Todo ello con un enfoque inclusivo, sostenible y alineado con los objetivos estratégicos institucionales.</p>
+		</div>
+	</section>
+
+	<!-- Vision Section -->
+	<section class="vision-section">
+		<div class="container">
+			<h2>VISION:</h2>
+			<p>Para el año 2030, aspiramos consolidarnos como una oficina reconocida por implementar estrategias de internacionalización de forma efectiva, logrando Universitaria que al menos el 25 % del estudiantado participe en programas de movilidad y telecolaboración internacional sostenible y transformadora, contribuyendo a la proyección global de nuestra Sede. Queremos liderar un cambio institucional que fomente la competencia intercultural, el pensamiento global crítico y el compromiso responsable con los desafíos mundiales emergentes.</p>
+		</div>
+	</section>
+
+	<!-- Normativas Procedimentales Section -->
+	<section class="normativas-section">
+		<div class="container">
+			<div class="normativas-header">
+				<h2>NORMATIVAS<br>PROCEDIMENTALES</h2>
+				<div class="arrow-icon">→</div>
+			</div>
+			<div class="normativas-carousel">
+				<div class="carousel-container">
+					<div class="carousel-track">
+						<div class="normativas-card" style={`background-image: url(${normativasImg.src});`}>
+							<h3>Normativas</h3>
+						</div>
+						<div class="normativas-card" style={`background-image: url(${politicasImg.src});`}>
+							<h3>Políticas</h3>
+						</div>
+						<div class="normativas-card" style={`background-image: url(${contratoImg.src});`}>
+							<h3>Contrato</h3>
+						</div>
+						<div class="normativas-card" style={`background-image: url(${eventosImg.src});`}>
+							<h3>Eventos</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Equipo de Trabajo Section -->
+	<section class="team-section">
+		<div class="container">
+			<h2>EQUIPO DE TRABAJO</h2>
+			<div class="team-content">
+				<div class="team-member">
+					<div class="member-image">
+						<img src={blgoLoor.src} alt="Blgo. Kruger Loor" />
+					</div>
+					<div class="member-info">
+						<h3>Blgo. Kruger Loor</h3>
+						<h4>Coordinador</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Team Showcase Section -->
+	<section class="team-showcase-section">
+		<div class="container">
+			<div class="team-grid">
+				<div class="team-card team-card-blue">
+					<div class="placeholder-avatar"></div>
+					<div class="team-card-content">
+						<h3>Juliano Pereira</h3>
+						<h4>Professor</h4>
+						<p>metus diam ultrices velit, in porttitor sem leo a lorem.</p>
+					</div>
+				</div>
+				<div class="team-card team-card-dark">
+					<div class="placeholder-avatar"></div>
+					<div class="team-card-content">
+						<h3>Eduarda Rocha</h3>
+						<h4>Professora</h4>
+						<p>Praesent pretium urna eu elit dapibus, nec facilisis ligula mollis. Morbi scelerisque aliquam turpis.</p>
+					</div>
+				</div>
+				<div class="team-card team-card-dark">
+					<div class=" placeholder-avatar"></div>
+					<div class="team-card-content">
+						<h3>Rafael Almeida</h3>
+						<h4>Professora</h4>
+						<p>Nam porttitor ornare ullamcorper. Nullam non euiet mollis augue.</p>
+					</div>
+				</div>
+				<div class="team-card team-card-blue">
+					<div class="placeholder-avatar"></div>
+					<div class="team-card-content">
+						<h3>Fabiana Melo</h3>
+						<h4>Professora</h4>
+						<p>Praesent pretium urna eu elit dapibus, nec facilisis ligula mollis. Morbi scelerisque aliquam turpis.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
+
+<style>
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	/* About Section */
+	.about-section {
+		padding: 80px 0;
+		background: #ffffff;
+	}
+
+	.about-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.about-image img {
+		width: 100%;
+		height: auto;
+		border-radius: 16px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	}
+
+	.about-text h2 {
+		color: #2c3e50;
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 800;
+		margin: 0 0 20px;
+		letter-spacing: 1px;
+	}
+
+	.about-text p {
+		color: #6c757d;
+		font-size: 1.3rem;
+		line-height: 1.6;
+		margin-bottom: 16px;
+	}
+
+	.about-text p:last-child {
+		margin-bottom: 0;
+	}
+
+	/* Mission Section */
+	.mission-section {
+		padding: 60px 0;
+		background: #ffffff;
+	}
+
+	.mission-section h2 {
+		color: #2c3e50;
+		font-size: clamp(2rem, 4vw, 2.5rem);
+		font-weight: 800;
+		margin: 0 0 20px;
+		letter-spacing: 1px;
+	}
+
+	.mission-section p {
+		color: #495057;
+		font-size: 1.3rem;
+		line-height: 1.7;
+		text-align: justify;
+	}
+
+	/* Vision Section */
+	.vision-section {
+		padding: 60px 0;
+		background: #ffffff;
+	}
+
+	.vision-section h2 {
+		color: #2c3e50;
+		font-size: clamp(2rem, 4vw, 2.5rem);
+		font-weight: 800;
+		margin: 0 0 20px;
+		letter-spacing: 1px;
+	}
+
+	.vision-section p {
+		color: #495057;
+		font-size: 1.3rem;
+		line-height: 1.7;
+		text-align: justify;
+	}
+
+	/* Normativas Procedimentales Section */
+	.normativas-section {
+		padding: 80px 0;
+		background: #ffffff;
+	}
+
+	.normativas-header {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		margin-bottom: 50px;
+	}
+
+	.normativas-header h2 {
+		color: #2c3e50;
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 800;
+		margin: 0;
+		letter-spacing: 1px;
+		line-height: 1.2;
+	}
+
+	.arrow-icon {
+		font-size: 3rem;
+		color: #2c3e50;
+		font-weight: bold;
+	}
+
+	.normativas-carousel {
+		overflow: hidden;
+	}
+
+	.carousel-container {
+		overflow-x: auto;
+		padding: 10px 0;
+	}
+
+	.carousel-track {
+		display: flex;
+		gap: 30px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+	}
+
+	.normativas-card {
+		flex: 0 0 280px;
+		height: 400px;
+		border-radius: 16px;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: flex-end;
+		padding: 20px;
+		cursor: pointer;
+		transition: transform 0.3s ease;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.normativas-card:hover {
+		transform: scale(1.05);
+	}
+
+	.normativas-card::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 1;
+	}
+
+
+
+	.normativas-card h3 {
+		color: #ffffff;
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin: 0;
+		position: relative;
+		z-index: 2;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	}
+
+	/* Team Section */
+	.team-section {
+		padding: 80px 0;
+		background: #1e3a8a;
+		color: white;
+	}
+
+	.team-section h2 {
+		color: white;
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 800;
+		margin: 0 0 50px;
+		letter-spacing: 1px;
+		text-align: center;
+	}
+
+	.team-content {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.team-member {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+		gap: 50px;
+		align-items: center;
+	}
+
+	.member-image {
+		display: flex;
+		justify-content: center;
+	}
+
+	.member-image img {
+		width: 500px;
+		height: 500px;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+
+	.member-info h3 {
+		color: white;
+		font-size: 2.2rem;
+		font-weight: 800;
+		margin: 0 0 8px;
+	}
+
+	.member-info h4 {
+		color: #93c5fd;
+		font-size: 1.3rem;
+		font-weight: 600;
+		margin: 0 0 25px;
+	}
+
+	.member-info p {
+		color: #e5e7eb;
+		font-size: 1.2rem;
+		line-height: 1.6;
+		margin-bottom: 16px;
+	}
+
+	/* Team Showcase Section */
+	.team-showcase-section {
+		padding: 80px 0;
+		background: #ffffff;
+	}
+
+	.team-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.team-card {
+		display: flex;
+		align-items: center;
+		gap: 25px;
+		padding: 30px;
+		border-radius: 25px;
+		color: white;
+		transition: all 0.3s ease;
+		min-height: 160px;
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	}
+
+	.team-card:hover {
+		transform: scale(1.03);
+		box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+	}
+
+	.team-card-blue {
+		background: #00A0DB;
+	}
+
+	.team-card-dark {
+		background: #0C4D8A;
+	}
+
+	.placeholder-avatar {
+		background: #9ca3af;
+		width: 170px;
+		height: 170px;
+		border-radius: 50%;
+		flex-shrink: 0;
+		object-fit: cover;
+	}
+
+	.team-card-content h3 {
+		font-size: 1.8rem;
+		font-weight: 800;
+		margin: 0 0 8px;
+		color: white;
+		letter-spacing: 0.5px;
+	}
+
+	.team-card-content h4 {
+		font-size: 1.1rem;
+		font-weight: 600;
+		margin: 0 0 15px;
+		color: rgba(255, 255, 255, 0.85);
+		letter-spacing: 0.3px;
+	}
+
+	.team-card-content p {
+		font-size: 1rem;
+		line-height: 1.5;
+		margin: 0;
+		color: rgba(255, 255, 255, 0.95);
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.about-content {
+			grid-template-columns: 1fr;
+			gap: 40px;
+			text-align: center;
+		}
+
+		.about-section,
+		.mission-section,
+		.vision-section,
+		.normativas-section,
+		.team-section,
+		.team-showcase-section {
+			padding: 60px 0;
+		}
+
+		.normativas-header {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+		}
+
+		.team-member {
+			grid-template-columns: 1fr;
+			gap: 30px;
+			text-align: center;
+		}
+
+		.member-image img {
+			width: 220px;
+			height: 260px;
+		}
+
+		.team-grid {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+
+		.team-card {
+			flex-direction: column;
+			text-align: center;
+			padding: 25px;
+			min-height: auto;
+		}
+
+		.placeholder-avatar {
+			width: 100px;
+			height: 100px;
+			margin-bottom: 15px;
+		}
+	}
+</style>
