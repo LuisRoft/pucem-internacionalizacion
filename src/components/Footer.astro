@@ -1,0 +1,240 @@
+---
+import pucemLogo from '../assets/pucem-logo.png';
+---
+
+<footer class="site-footer">
+	<div class="footer-content">
+		<div class="footer-logo">
+			<img src={pucemLogo.src} alt="PUCE Manabí" />
+		</div>
+		
+		<div class="footer-separator"></div>
+		
+		<div class="footer-sections">
+			<div class="footer-section">
+				<h3>SEDES</h3>
+				<ul>
+					<li><a href="#">PUCE Quito</a></li>
+					<li><a href="#">PUCE Ambato</a></li>
+					<li><a href="#">PUCE Esmeraldas</a></li>
+					<li><a href="#">PUCE Santo Domingo</a></li>
+					<li><a href="#">PUCE Ibarra</a></li>
+					<li><a href="#">PUCE Amazonas</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>SERVICIOS</h3>
+				<ul>
+					<li><a href="#">Sistema Académico</a></li>
+					<li><a href="#">Entorno Virtual</a></li>
+					<li><a href="#">Correo Institucional</a></li>
+					<li><a href="#">Biblioteca</a></li>
+					<li><a href="#">Comprobantes Electrónicos</a></li>
+					<li><a href="#">Trabaja con nosotros</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>ENLACES</h3>
+				<ul>
+					<li><a href="#">Intranet</a></li>
+					<li><a href="#">Sugerencias</a></li>
+					<li><a href="#">Preguntas Frecuentes</a></li>
+					<li><a href="#">Matrícula de Grado</a></li>
+					<li><a href="#">Matrícula de Posgrado</a></li>
+					<li><a href="#">Políticas de Privacidad</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>INSTITUCIONES</h3>
+				<ul>
+					<li><a href="#">Senescyt</a></li>
+					<li><a href="#">Caces</a></li>
+					<li><a href="#">Cedia</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>OFERTA ACADÉMICA</h3>
+				<ul>
+					<li><a href="#">Carreras de Grado</a></li>
+					<li><a href="#">Programas de Posgrado</a></li>
+					<li><a href="#">Educación Continua</a></li>
+					<li><a href="#">PUCE Tec</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-bottom">
+		<div class="footer-contact">
+			<div class="footer-contact-info">
+				<span>📞 (PBX) 05 3700750</span>
+				<span>✉ info@pucesm.edu.ec</span>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<p>Copyright © <span id="current-year">2022</span> Pontificia Universidad Católica del Ecuador Sede Manabí</p>
+		</div>
+	</div>
+</footer>
+
+<script is:inline>
+	// Update copyright year to current year
+	document.addEventListener('DOMContentLoaded', function() {
+		const yearSpan = document.getElementById('current-year');
+		if (yearSpan) {
+			yearSpan.textContent = new Date().getFullYear().toString();
+		}
+	});
+</script>
+
+<style>
+	.site-footer {
+		background: #0C4D8A;
+		color: white;
+		padding: 40px 0 0;
+	}
+
+	.footer-content {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 40px;
+	}
+
+	.footer-logo {
+		margin-bottom: 30px;
+	}
+
+	.footer-logo img {
+		height: 50px;
+		width: auto;
+	}
+
+	.footer-separator {
+		height: 1px;
+		background: rgba(255, 255, 255, 0.3);
+		margin: 30px 0;
+	}
+
+	.footer-sections {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 60px;
+		margin-bottom: 40px;
+	}
+
+	.footer-section h3 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		margin: 0 0 20px;
+		color: white;
+		letter-spacing: 0.5px;
+	}
+
+	.footer-section ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.footer-section li {
+		margin-bottom: 12px;
+	}
+
+	.footer-section a {
+		color: rgba(255, 255, 255, 0.9);
+		text-decoration: none;
+		font-size: 0.9rem;
+		transition: color 0.3s ease;
+	}
+
+	.footer-section a:hover {
+		color: white;
+	}
+
+	.footer-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+		background: #40424d;
+		padding: 20px 200px;
+	}
+
+	.footer-contact {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.footer-contact-info {
+		display: flex;
+		align-items: center;
+	}
+
+	.footer-contact span {
+		font-size: 0.9rem;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+
+	.footer-copyright {
+		text-align: right;
+	}
+
+	.footer-copyright p {
+		margin: 0;
+		font-size: 0.85rem;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	@media (max-width: 1024px) {
+		.footer-sections {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px;
+		}
+		
+		.footer-content {
+			padding: 0 30px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.footer-sections {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 25px;
+		}
+
+		.footer-contact {
+			flex-direction: column;
+			gap: 15px;
+			text-align: center;
+		}
+
+		.footer-contact-info {
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.footer-contact,
+		.footer-copyright {
+			padding: 0 24px;
+		}
+
+		.footer-copyright {
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.footer-sections {
+			grid-template-columns: 1fr;
+		}
+		
+		.site-footer {
+			padding: 40px 0 0;
+		}
+	}
+</style>

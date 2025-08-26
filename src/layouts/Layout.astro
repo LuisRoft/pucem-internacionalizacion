@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 
 const currentPath = Astro.url.pathname;
 ---
@@ -26,6 +27,7 @@ const currentPath = Astro.url.pathname;
 		<main>
 			<slot />
 		</main>
+		<Footer />
 	</body>
 </html>
 
