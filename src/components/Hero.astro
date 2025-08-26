@@ -1,0 +1,87 @@
+---
+interface Props {
+  title: string;
+  image: string; // pass image.src
+  buttonText?: string;
+}
+
+const { title, image, buttonText = 'POSTULATE!' }: Props = Astro.props as Props;
+---
+
+<section class="hero" style={`background-image: url(${image});`}>
+  <div class="hero__content">
+    <h1 class="hero__title">{title}</h1>
+    <a href="#" class="hero__cta">{buttonText}</a>
+    <div class="hero__extra">
+      <slot name="extra" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  .hero__title {
+    margin: 0;
+    color: white;
+    max-width: 1200px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 6vw, 6rem);
+  }
+
+  .hero__cta {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    background: rgba(226, 226, 226, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .hero__cta:hover {
+    background: rgba(226, 226, 226, 0.28);
+  }
+
+  .hero__extra {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+</style>
+
+
