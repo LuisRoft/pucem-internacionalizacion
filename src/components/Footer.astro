@@ -160,7 +160,7 @@ import pucemLogo from '../assets/pucem-logo.png';
         display: flex;
         justify-content: space-between;
 		background: #40424d;
-		padding: 20px 200px;
+		padding: 20px 40px;
 	}
 
 	.footer-contact {
@@ -177,17 +177,34 @@ import pucemLogo from '../assets/pucem-logo.png';
 	.footer-contact span {
 		font-size: 0.9rem;
 		color: rgba(255, 255, 255, 0.9);
+		margin-right: 20px;
 	}
 
+	.footer-contact span:last-child {
+		margin-right: 0;
+	}
 
 	.footer-copyright {
 		text-align: right;
+		flex: 1;
 	}
 
 	.footer-copyright p {
 		margin: 0;
 		font-size: 0.85rem;
 		color: rgba(255, 255, 255, 0.8);
+		line-height: 1.4;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1200px) {
+		.footer-content {
+			padding: 0 30px;
+		}
+
+		.footer-sections {
+			gap: 40px;
+		}
 	}
 
 	@media (max-width: 1024px) {
@@ -195,10 +212,18 @@ import pucemLogo from '../assets/pucem-logo.png';
 			grid-template-columns: repeat(3, 1fr);
 			gap: 30px;
 		}
-		
-		.footer-content {
-			padding: 0 30px;
+
+		.footer-bottom {
+			padding: 20px 30px;
 		}
+
+		.footer-contact span {
+			font-size: 0.85rem;
+		}
+
+		.footer-copyright p {
+			font-size: 0.8rem;
+		}																																																																																																																																																																																																									
 	}
 
 	@media (max-width: 768px) {
@@ -207,34 +232,114 @@ import pucemLogo from '../assets/pucem-logo.png';
 			gap: 25px;
 		}
 
-		.footer-contact {
+		.footer-content {
+			padding: 0 20px;
+		}
+
+		.footer-section h3 {
+			font-size: 1rem;
+		}
+
+		.footer-section a {
+			font-size: 0.85rem;
+		}
+
+		.footer-bottom {
 			flex-direction: column;
 			gap: 15px;
+			padding: 15px 20px;
 			text-align: center;
 		}
 
-		.footer-contact-info {
+		.footer-contact {
 			flex-direction: column;
 			gap: 10px;
 		}
 
-		.footer-contact,
-		.footer-copyright {
-			padding: 0 24px;
+		.footer-contact-info {
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		.footer-contact span {
+			margin-right: 0;
 		}
 
 		.footer-copyright {
 			text-align: center;
+			flex: none;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.footer-sections {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+
+		.footer-section {
+			text-align: center;
+		}
+
+		.footer-section h3 {
+			font-size: 1.1rem;
+			margin-bottom: 15px;
 		}
 	}
 
 	@media (max-width: 480px) {
-		.footer-sections {
-			grid-template-columns: 1fr;
-		}
-		
 		.site-footer {
-			padding: 40px 0 0;
+			padding: 30px 0 0;
+		}
+
+		.footer-content {
+			padding: 0 15px;
+		}
+
+		.footer-logo img {
+			height: 40px;
+		}
+
+		.footer-sections {
+			margin-bottom: 30px;
+		}
+
+		.footer-section h3 {
+			font-size: 1rem;
+		}
+
+		.footer-section li {
+			margin-bottom: 8px;
+		}
+
+		.footer-bottom {
+			padding: 12px 15px;
+		}
+
+		.footer-contact span {
+			font-size: 0.8rem;
+		}
+
+		.footer-copyright p {
+			font-size: 0.75rem;
+		}
+	}
+
+	@media (max-width: 360px) {
+		.footer-content {
+			padding: 0 10px;
+		}
+
+		.footer-sections {
+			gap: 15px;
+		}
+
+		.footer-section h3 {
+			font-size: 0.95rem;
+		}
+
+		.footer-section a {
+			font-size: 0.8rem;
 		}
 	}
 </style>

@@ -19,6 +19,25 @@ import embajadores from '../assets/embajadores.png';
 </Layout>
 
 <style>
+	/* Prevent horizontal overflow */
+	html, body {
+		overflow-x: hidden;
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	/* Ensure no element causes horizontal overflow */
+	img, video, canvas, svg {
+		max-width: 100%;
+		height: auto;
+	}
+
 	.stats-card {
 		display: flex;
 		gap: 28px;
@@ -31,6 +50,7 @@ import embajadores from '../assets/embajadores.png';
 		margin-top: 8px;
 		max-width: 1000px;
 		width: calc(100% - 32px);
+		min-width: 0;
 	}
 
 	.stat {
@@ -38,31 +58,104 @@ import embajadores from '../assets/embajadores.png';
 		flex-direction: column;
 		align-items: center;
 		min-width: 150px;
+		flex: 1;
+		min-width: 0;
 	}
 
 	.stat__value {
 		font-weight: 800;
 		font-size: clamp(1.25rem, 2.5vw, 2rem);
 		line-height: 1;
+		white-space: nowrap;
 	}
 
 	.stat__label {
 		font-size: 0.95rem;
 		opacity: 0.95;
+		text-align: center;
+		line-height: 1.2;
 	}
 
 	.divider {
 		opacity: 0.4;
 		font-size: 2rem;
+		flex-shrink: 0;
 	}
 
+	/* Responsive Design */
 	@media (max-width: 900px) {
 		.stats-card {
-			gap: 16px;
+			gap: 20px;
 			flex-wrap: wrap;
+			padding: 18px 20px;
 		}
+
+		.stat {
+			min-width: 120px;
+			flex: 1;
+		}
+
 		.divider {
 			display: none;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.stats-card {
+			padding: 16px 18px;
+			gap: 16px;
+		}
+
+		.stat {
+			min-width: 100px;
+		}
+
+		.stat__value {
+			font-size: clamp(1rem, 4vw, 1.5rem);
+		}
+
+		.stat__label {
+			font-size: 0.85rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.stats-card {
+			padding: 14px 16px;
+			gap: 12px;
+			width: calc(100% - 24px);
+		}
+
+		.stat {
+			min-width: 80px;
+		}
+
+		.stat__value {
+			font-size: clamp(0.9rem, 3.5vw, 1.3rem);
+		}
+
+		.stat__label {
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 360px) {
+		.stats-card {
+			padding: 12px 14px;
+			gap: 10px;
+			width: calc(100% - 20px);
+		}
+
+		.stat {
+			min-width: 70px;
+		}
+
+		.stat__value {
+			font-size: clamp(0.8rem, 3vw, 1.1rem);
+		}
+
+		.stat__label {
+			font-size: 0.75rem;
 		}
 	}
 </style>

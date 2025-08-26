@@ -136,10 +136,37 @@ import eventosImg from '../assets/cards/eventos.png';
 </Layout>
 
 <style>
+	/* Prevent horizontal overflow */
+	html, body {
+		overflow-x: hidden;
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	/* Ensure no element causes horizontal overflow */
+	img, video, canvas, svg {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* Fix for any potential grid or flexbox issues */
+	.about-content,
+	.team-member,
+	.team-grid {
+		min-width: 0;
+	}
+
 	.container {
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 0 24px;
+		width: 100%;
 	}
 
 	/* About Section */
@@ -253,11 +280,18 @@ import eventosImg from '../assets/cards/eventos.png';
 
 	.normativas-carousel {
 		overflow: hidden;
+		position: relative;
 	}
 
 	.carousel-container {
 		overflow-x: auto;
 		padding: 10px 0;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
+	}
+
+	.carousel-container::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
 	}
 
 	.carousel-track {
@@ -265,6 +299,7 @@ import eventosImg from '../assets/cards/eventos.png';
 		gap: 30px;
 		padding-bottom: 10px;
 		padding-left: 10px;
+		min-width: fit-content;
 	}
 
 	.normativas-card {
@@ -341,8 +376,8 @@ import eventosImg from '../assets/cards/eventos.png';
 	}
 
 	.member-image img {
-		width: 500px;
-		height: 500px;
+		max-width: 100%;
+		height: auto;
 		object-fit: cover;
 		border-radius: 20px;
 	}
@@ -440,6 +475,67 @@ import eventosImg from '../assets/cards/eventos.png';
 	}
 
 	/* Responsive Design */
+	@media (max-width: 480px) {
+		.container {
+			padding: 0 16px;
+		}
+
+		.normativas-card {
+			flex: 0 0 250px;
+			height: 350px;
+		}
+
+		.carousel-track {
+			padding-left: 5px;
+			gap: 20px;
+		}
+
+		.about-text p {
+			font-size: 1.1rem;
+		}
+
+		.mission-section p,
+		.vision-section p {
+			font-size: 1.1rem;
+		}
+	}
+
+	@media (max-width: 435px) {
+		.container {
+			padding: 0 12px;
+		}
+
+		.normativas-card {
+			flex: 0 0 220px;
+			height: 320px;
+		}
+
+		.normativas-header {
+			gap: 15px;
+		}
+
+		.normativas-header h2 {
+			font-size: clamp(1.8rem, 3vw, 2.5rem);
+		}
+
+		.team-member {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+
+		.member-info h3 {
+			font-size: 1.8rem;
+		}
+
+		.member-info h4 {
+			font-size: 1.1rem;
+		}
+
+		.member-info p {
+			font-size: 1rem;
+		}
+	}
+
 	@media (max-width: 768px) {
 		.about-content {
 			grid-template-columns: 1fr;
@@ -469,8 +565,8 @@ import eventosImg from '../assets/cards/eventos.png';
 		}
 
 		.member-image img {
-			width: 220px;
-			height: 260px;
+			max-width: 280px;
+			height: auto;
 		}
 
 		.team-grid {

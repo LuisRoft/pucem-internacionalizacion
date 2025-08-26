@@ -8,4 +8,23 @@ import pucemPorto from '../assets/pucem-porto.jpg';
 	<Hero title="OPORTUNIDADES" image={pucemPorto.src} />
 </Layout>
 
+<style>
+	/* Prevent horizontal overflow */
+	html, body {
+		overflow-x: hidden;
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
 
+	* {
+		box-sizing: border-box;
+	}
+
+	/* Ensure no element causes horizontal overflow */
+	img, video, canvas, svg {
+		max-width: 100%;
+		height: auto;
+	}
+</style>
